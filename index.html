@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Multcob - Mala Direta</title>
+	<link rel="stylesheet" href="./css/reveal.min.css" />
+	<link rel="stylesheet" href="./lib/css/zenburn.css">
+	<link rel="stylesheet" href="./css/theme/league.css" />
+	<!--    
+    <link rel="stylesheet" type="text/css" href="./css/print/pdf.css">
+ -->
+	<style>
+		body>div>div.slides>section.present>ul>li>strong {
+			text-decoration: underline
+		}
+
+		.texto-medio {
+			font-size: 32px !important;
+			overflow: hidden !important
+		}
+
+		.justificado {
+			text-align: justify !important;
+
+		}
+
+		.lista_menor {
+			font-size: 24px !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+
+			<section>
+				<h3>Geração de Mala Direta no Multcob </h3>
+				<BR>
+				<BR>
+				<BR>
+				<h4>Guilherme Bencke</h4>
+				<h4>Porto Alegre - Dezembro, 2017</h4>
+			</section>
+
+			<section>
+				<h2>Porque fazer as ações no Multcob:</h2>
+				<p class="justificado">Desde sua criação, o multcob oferece diversas opções em termos de geração de ações massificadas. </p>
+				<p class="justificado">Todas as ações geradas dentro do multcob são registradas como ocorrências e os textos e dados gerados para essa ação podem ser consultados dentro do Multcob.</p>
+			</section>
+
+			<section>
+				<h2>Porque fazer as ações no Multcob(2)</h2>
+				<p class="justificado">O Multcob ainda permite os seguintes controles de ações (<em>Configurados na hora de gerar a ação</em>):</p>
+				<ul>
+					<li class="lista_menor">Não permitir ações concorrentes</li>
+					<li class="lista_menor">Não permitir ações concorrentes do mesmo tipo</li>
+					<li class="lista_menor">Não permitir ligação para o cliente durante a validade da ação.</li>
+					<li class="lista_menor">Colocar o cliente em Quarentena de n dias</li>
+					<li class="lista_menor">Controle de Validade da Ação</li>
+					<li class="lista_menor">Controle do Custo da Ação por unidade.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Tipos de Ações no Multcob </h2>
+			</section>
+
+			<section>
+				<p class="justificado">Ações Eletrônicas:</p>
+				<ul>
+					<li class="lista_menor"><strong>eMail</strong> - Gera o corpo de um email em HTML para ser enviado via fornecedor de email, gerando um arquivo texto a ser enviado.</li>
+					<li class="lista_menor"><strong>SMS</strong> - Gera o corpo de um SMS para ser enviado via fornecedor de SMS, gerando um arquivo texto a ser enviado.</li>
+				</ul>
+				<p class="justificado">Ações por Correio (Snail Mail)</p>
+				<ul>
+					<li class="lista_menor"><strong>Mala Direta Externa</strong> - Apenas um marcador que indica que foi enviada uma mala Direta para ser confeccionada por um fornecedor externo. Apenas realiza a marcação no Mulcob</li>
+					<li class="lista_menor"><strong>Mala Direta</strong> - Apartir de uma configuração bastante detalhada de planos ofertados, politicas a serem usadas e outros parametros, o sistema gera uma serie de acordos "invisiveis" que existem no sistema, mas, que são invisiveis ao operador. É gerado um arquivo final a ser enviado para a grafica.</li>
+					<li class="lista_menor"><strong>Remessa de Mala Direta</strong> - Cria Propostas, mas, eles nao sao salvos no sistema, é apenas calculado o acordo e salvo num arquivo txt para ser enviada a grafica.</li>
+					<li class="lista_menor"><strong>Notificacao</strong> - Apenas gera um texto de notificacao para ser enviado a grafica.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Quadro de Diferencas entre as ações</h3>
+				<img src="i/Diferencas.jpg" />
+			</section>
+
+			<section>
+				<h3>Mala Direta Gerada pelo Multcob</h3>
+				<p class="justificado lista_menor">Nesse treinamento iremos nos focar em gerar malas diretamente usando o Multcob, e gerando um arquivo a ser enviado para a grafica. Para isso, precisaremos dos seguintes Passos:</p>
+				<ul>
+					<li class="lista_menor">Criar o modelo de ações no Multcob</li>
+					<li class="lista_menor">Selecionar os contratos que irao participar da mala direta.</li>
+					<li class="lista_menor">Fornecer os parametros de Calculo dos Acordos</li>
+					<li class="lista_menor">Calcular os acordos e gerar os acordos invisiveis</li>
+					<li class="lista_menor">Gerar o Arquivo Texto a ser enviado para a grafica.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Modelo de Acoes de Mala Direta</h3>
+				<p class="justificado lista_menor" style="margin-bottom:5px">Para podermos criar acoes no Multcob, é necessario criar um modelo de ação como visto ao lado, que é acessavel pelo menu.</p>
+				<img src="/i/02.png" style="width:50%;height>50%" />
+			</section>
+
+			<section>
+				<h3>Tela de Modelo de Acoes de Mala Direta</h3>
+				<img src="/i/01.png" style="width:50%;height>50%" />
+			</section>
+			<section>
+				<h3>Configurações aplicáveis a todas as Ações</h3>
+				<img src="/i/03.png" style="width:100%;height:100%" />
+			</section>
+			<section>
+				<h3>Configurações aplicáveis a todas as Ações</h3>
+				<ul>
+					<li class="lista_menor"><strong>Nome</strong>: O Nome do Modelo de Ação. Esse nome será usado para seleção no Gerenciador </li>
+					<li class="lista_menor"><strong>Tipo de Acao: Selecionar entre</strong>: eMail, SMS, Mala Direta Externa, Mala Direta, Remessa, Notificação</li>
+					<li class="lista_menor"><strong>Resultado de ocorrência:</strong> O Resultado a ser aplicado nas Ocorrencias a serem gerados por essa ação.</li>
+					<li class="lista_menor"><strong>Permite Ação Concorrente:</strong> Permite que quando essa ação estiver em validade, possa ser geradas outras ações?</li>
+					<li class="lista_menor"><strong>Permite Ação Mesmo Tipo:</strong> Permite que sejam geradas outras ações desse mesmo tipo quando a ação ainda estiver em validade? </li>
+					<li class="lista_menor"><strong>Permite Ligação:</strong> Permite que se ligue para esse cliente quando a ação estiver em vigencia?</li>
+					<li class="lista_menor"><strong>Quarentena (dias):</strong> Dias em que o cliente deve ficar sem ligação apartir da geração da ação</li>
+					<li class="lista_menor"><strong>Validade (dias):</strong> Dias em que essa ação é valida</li>
+					<li class="lista_menor"><strong>Custo Unitario:</strong> Custo unitario por ação gerada. </li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Configurações aplicáveis a ações de mala</h3>
+				<img src="/i/04.png" style="width:100%;height:100%" />
+			</section>
+
+			<section>
+				<h3>Configurações aplicáveis a ações de mala</h3>
+				<ul>
+					<li class="lista_menor"><strong>Regras de Politicas</strong>: Politicas a serem usadas nessa ação.</li>
+					<li class="lista_menor"><strong>Agrupamento de Promessas</strong>: As promessas a serem geradas, será uma por cliente, por contrato ou por politica?</li>
+					<li class="lista_menor"><strong>Ignorar Data de Devolução</strong>: Nao levar em conta a data de devolução na hora de selecionar contratos / titulos </li>
+					<li class="lista_menor"><strong>Permitir Seleção Individualizada de Contratos</strong>: Permitir que o operador selecione os contratos a serem usados diretamente no gerenciador.</li>
+					<li class="lista_menor"><strong>Permitir Incluir Parcelas com Data até Entrada</strong>: Devemos incluir titulos q ainda não venceram?</li>
+					<li class="lista_menor"><strong>Selecao de Endereco</strong>: Forma de seleção do endereço a ser enviada a mala.</li>
+					<li class="lista_menor"><strong>Quantidade de Parcelas Oferecidas</strong>: Planos Oferecidos nessa mala direta</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Gerenciador - Gerar Mala</h3>
+				<p class="justificado lista_menor" style="margin-bottom:5px">Para se gerar a mala no Multcob, é bastante simples, apenas selecionar os contratos e os cpfs desejados e clicar em acoes gerenciador </p>
+				<img src="/i/05.png" style="width:80%;height:80%" />
+			</section>
+
+			<section>
+				<h3>Selecionar modelo de Ação</h3>
+				<p class="justificado lista_menor" style="margin-bottom:5px">Ao se selecionar o modelo de ação, é necessário escolher a data de entrada para os acordos a serem gerados, e até quando eles vão ser validados</p>
+				<img src="/i/07.png" style="width:80%;height:80%" />
+			</section>
+
+			<section>
+				<h3>Opções de Geração de Mala Direta</h3>
+				<p class="justificado lista_menor" style="margin-bottom:5px">Abrira uma tela semelhante aos parametros da tela de acordo. Essa tela permite q se configure os descontos e todos os parametros dos acordos a serem gerados.</p>
+				<img src="/i/08.png" style="width:80%;height:80%" />
+			</section>
+
+			<section>
+				<h3>Seleção de Arquivo e Formato de Mala</h3>
+				<p class="justificado " >Após a seleção do formato de mala direta a ser criado, é necessário que se selecione também o arquivo que será gerado os dados da mala direta</p>
+			</section>
+
+
+			<section>
+				<h3>Tela de Ações</h3>
+				<p class="justificado lista_menor" style="margin-bottom:5px">Apos a geracao do arquivo de mala direta, podemos acompanhar as acoes na tela de acoes normalmente como abaixo:</p>
+				<img src="/i/09.png" style="width:60%;height:60%" />
+				<p class="justificado lista_menor" style="margin-bottom:5px">Essa mesma tela já é usada para SMS, Email e outras ações.</p>
+			</section>
+
+			<section>
+				<h3>Efetivação do Acordo de Mala </h3>
+				<p class="justificado" style="margin-bottom:5px">Quando ocorre a baixa de parcela e se detecta uma baixa de um valor da entrada do acordo de mala direta, esse acordo invisivel identificado pelo valor da entrada ou pelo campo: "NossoNumero", sera efetivado e entrado no sistema como um acordo comum.</p>
+			</section>
+
+			<section>
+				<h3>Cancelamento do Acordo de Mala </h3>
+				<p class="justificado" style="margin-bottom:5px">Apos a data de validade do acordo, são cancelados todos os acordos automaticamente de forma invisivel ao operador através do CobSinc noturno</p>
+			</section>
+		</div>
+	</div>
+	<script src="./lib/js/head.min.js"></script>
+	<script src="./js/reveal.min.js"></script>
+	<script>
+		Reveal.initialize({
+			// Display controls in the bottom right corner
+			controls: true,
+			// Display a presentation progress bar
+			progress: true,
+			// If true; each slide will be pushed to the browser history
+			history: true,
+			// Loops the presentation, defaults to false
+			loop: false,
+			// Flags if mouse wheel navigation should be enabled
+			mouseWheel: true,
+			// Apply a 3D roll to links on hover
+			rollingLinks: true,
+			// UI style
+			theme: Reveal.getQueryHash().theme || 'default',
+			// Transition style
+			transition: 'Fade',
+			pdfMaxPagesPerSlide: 1,
+
+			dependencies: [{
+				src: './plugin/highlight/highlight.js',
+				async: true,
+				callback: function() {
+					hljs.initHighlightingOnLoad();
+				}
+			}]
+		});
+	</script>
+	<script type="text/javascript" src="./plugin/highlight/highlight.js"></script>
+</body>
+
+</html>
